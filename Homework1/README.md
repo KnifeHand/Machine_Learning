@@ -27,15 +27,12 @@ Linear Regression is of mainly two types: Simple Linear Regression and Multiple 
 
 Regression is the process of estimating the relationship between input data and the continuous-valued output data. This data is usually in the form of real numbers, and our goal is to estimate the underlying function that governs the mapping from the input to the output.
 
-***Consider a mapping between input and output as shown:
+Consider a mapping between input and output as shown:
 
 1 --> 2
-
 3 --> 6
-
 4.3 --> 8.6
-
-7.1 --> 14.2***
+7.1 --> 14.2
 
 You can easily estimate the relationship between the inputs and the outputs by analyzing the pattern. We can observe that the output is twice the input value in each case, hence the transformation would be: f(x) = 2x
 Linear regression refers to estimating the relevant function using a linear combination of input variables. The preceding example was an example that consisted of one input variable and one output variable.
