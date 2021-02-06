@@ -75,5 +75,4 @@ Assuming line of best fit for a set of points is:
 
 If you run the above code, you can observe the output graph as shown:
 
-![Linear Regression Graph](/Matt/"Google Drive"/Machine_Learning/LinearRegressionModel.png)
-Format: ![Alt Text](url)
+![Alt Text](https://github.com/knifehand/Machine_Learning/blob/master/LinearRegressionModel.png?raw=true)
