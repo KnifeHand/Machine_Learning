@@ -16,7 +16,7 @@ b – Intercept
 
 These coefficients a and b are derived based on minimizing the sum of squared difference of distance between data points and regression line.
 
-![LR graph example](/Homework1/images/LRgraphExample.jpg?raw=true)
+![LR graph example](/Homework1/images/LRgraphExample.jpg)
 
 **Example:**
 
