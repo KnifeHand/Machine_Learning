@@ -1,6 +1,6 @@
 **Linear Regression**
 
-Linear regression is used to estimate real world values like cost of houses, number of calls, total sales etc. based on continuous variable(s). Here, we establish relationship between dependent and independent variables by fitting a best line. This line of best fit is known as regression line and is represented by the linear equation Y= a * X + b.
+Linear regression is used to estimate real world values like cost of houses, number of calls, total sales etc. based on continuous variable(s). Here, we establish relationship between dependent and independent variables by fitting a best line. This line of best fit is known as **regression line** and is represented by the linear equation Y= a * X + b.  The vertical lines from the regression line to the sample points are the **ofsets** or **residuals** - the errors of our prediction.
 
 or for the purposes of this class ***y = w0 + w1 * x***
 ![](/Homework1/images/LRgraphExample.JPG?raw=true)
@@ -150,3 +150,15 @@ You can **calculate the coefficients**, the residual **sum of squares** and the 
     ('Coefficients: \n', array([ 941.43097333]))
     Mean squared error: 3035.06
     Variance score: 0.41
+
+**Multiple linear regression**
+
+Wwe can also generalize the linear regression model to multiple explanatory variables; this process is called multiple linear regression:
+
+![Multiple Linear Regression Graph](/Homework1/images/multipleLinearRegressionExpression.png?raw=true)
+
+Here, w0 is the y-axis intercept with x0 = 1.  The following figure shows how the two-dimensional, fitted hyperplane of a multiple linear regression model with two features could look:
+
+![Multiple Linear Regression Graph](/Homework1/images/MultLinReg2features.png?raw=true)
+
+As we can see, visualizing multiple linear regression fits in three-dimensional scatter plot are already challenging to interpret when looking at static figures.
