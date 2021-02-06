@@ -3,9 +3,13 @@
 Linear regression is used to estimate real world values like cost of houses, number of calls, total sales etc. based on continuous variable(s). Here, we establish relationship between dependent and independent variables by fitting a best line. This line of best fit is known as regression line and is represented by the linear equation Y= a * X + b.
 
 In this equation:
+
 Y – Dependent Variable
+
 a – Slope
+
 X – Independent variable
+
 b – Intercept
 
 These coefficients a and b are derived based on minimizing the sum of squared difference of distance between data points and regression line.
