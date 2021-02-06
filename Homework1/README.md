@@ -75,4 +75,4 @@ Assuming line of best fit for a set of points is:
 
 If you run the above code, you can observe the output graph as shown:
 
-![github-small](https://github.com/knifehand/Machine_Learning/Homework1/blob/master/LinearRegressionGraph.jpg?raw=true "Linear Regression Graph")
+![](/Homework1/LinearRegressionGraph.jpg?raw=true "Linear Regression Graph")
