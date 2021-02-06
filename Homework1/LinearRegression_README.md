@@ -33,9 +33,12 @@ Regression is the process of estimating the relationship between input data and 
 
 Consider a mapping between input and output as shown:
 
-1 --> 2,
-3 --> 6,
-4.3 --> 8.6,
+1 --> 2
+
+3 --> 6
+
+4.3 --> 8.6
+
 7.1 --> 14.2
 
 You can easily estimate the relationship between the inputs and the outputs by analyzing the pattern. We can observe that the output is twice the input value in each case, hence the transformation would be: f(x) = 2x
