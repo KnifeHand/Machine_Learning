@@ -153,7 +153,7 @@ You can **calculate the coefficients**, the residual **sum of squares** and the 
 
 **Multiple linear regression**
 
-Wwe can also generalize the linear regression model to multiple explanatory variables; this process is called multiple linear regression:
+We can also generalize the linear regression model to multiple explanatory variables; this process is called multiple linear regression:
 
 ![Multiple Linear Regression Graph](/Homework1/images/multipleLinearRegressionExpression.jpg?raw=true)
 
