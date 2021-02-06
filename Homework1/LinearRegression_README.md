@@ -51,6 +51,7 @@ Linear regression refers to estimating the relevant function using a linear comb
 Consider that you have been provided with a data file, called data_singlevar.txt. This contains comma-separated lines where the first element is the input value and the second element is the output value that corresponds to this input value. You should use this as the input argument:
 
 Assuming line of best fit for a set of points is:
+
     y = a + b * x
     where: b = ( sum(xi * yi) - n * xbar * ybar ) / sum((xi - xbar)^2)
     a = ybar - b * xbar
