@@ -29,7 +29,7 @@ Linear Regression is of mainly two types: Simple Linear Regression and Multiple 
 
 **Building a Linear Regressor**
 
-Regression is the process of estimating the relationship between input data and the continuous-valued output data. This data is usually in the form of real numbers, and our goal is to estimate the underlying function that governs the mapping from the input to the output.
+Regression is the ***process of estimating the relationship between input data and the continuous-valued output data.*** This data is usually in the form of real numbers, and our goal is to estimate the underlying function that governs the mapping from the input to the output.
 
 Consider a mapping between input and output as shown:
 
@@ -41,10 +41,10 @@ Consider a mapping between input and output as shown:
 
 7.1 --> 14.2
 
-You can easily estimate the relationship between the inputs and the outputs by analyzing the pattern. We can observe that the output is twice the input value in each case, hence the transformation would be: f(x) = 2x
+You can easily estimate the relationship between the inputs and the outputs by **analyzing the pattern**. We can observe that the output is twice the input value in each case, hence the **transformation would be: f(x) = 2x**
 Linear regression refers to estimating the relevant function using a linear combination of input variables. The preceding example was an example that consisted of one input variable and one output variable.
 
-The goal of linear regression is to extract the relevant linear model that relates the input variable to the output variable. This aims to minimize the sum of squares of differences between the actual output and the predicted output using a linear function. This method is called Ordinary Least Squares. You may assume that a curvy line out there that fits these points better, but linear regression does not allow this. The main advantage of linear regression is that it is not complex. You may also find more accurate models in non-linear regression, but they will be slower. Here the model tries to approximate the input data points using a straight line.
+***The goal of linear regression is to extract the relevant linear model that relates the input variable to the output variable.*** This aims to minimize the sum of squares of differences between the actual output and the predicted output using a linear function. This method is called Ordinary Least Squares. You may assume that a curvy line out there that fits these points better, but linear regression does not allow this. The main advantage of linear regression is that it is not complex. You may also find more accurate models in non-linear regression, but they will be slower. Here the model tries to approximate the input data points using a straight line.
 
 ***Let us understand how to build a linear regression model in Python.***
 
