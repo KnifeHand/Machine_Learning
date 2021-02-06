@@ -94,7 +94,7 @@ If you run the above code, you can observe the output graph as shown:
 
 ![Linear Regression Graph](/Homework1/images/LinearRegressionGraph.jpg?raw=true)
 
-![](/Homework1/images/LRGraph.png?raw=true)
+![](/Homework1/images/LRgraphExample.jpg?raw=true)
 
 ***Note*** that this example uses only the first feature of the diabetes dataset, in order to illustrate a **two-dimensional plot** of this regression technique. The straight line can be seen in the plot, ***showing how linear regression attempts to draw a straight line that will best minimize the residual sum of squares between the observed responses in the dataset***, and the responses predicted by the linear approximation.
 
