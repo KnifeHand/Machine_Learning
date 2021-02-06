@@ -2,8 +2,6 @@
 
 Linear regression is used to estimate real world values like cost of houses, number of calls, total sales etc. based on continuous variable(s). Here, we establish relationship between dependent and independent variables by fitting a best line. This line of best fit is known as regression line and is represented by the linear equation Y= a * X + b.
 
-![](/Homework1/images/LRGraph.png)
-
 or for the purposes of this class y = w0 + w1 * x
 
 In this equation:
@@ -95,6 +93,8 @@ Assuming line of best fit for a set of points is:
 If you run the above code, you can observe the output graph as shown:
 
 ![Linear Regression Graph](/Homework1/images/LinearRegressionGraph.jpg?raw=true)
+
+![](/Homework1/images/LRGraph.png?raw=true)
 
 ***Note*** that this example uses only the first feature of the diabetes dataset, in order to illustrate a **two-dimensional plot** of this regression technique. The straight line can be seen in the plot, ***showing how linear regression attempts to draw a straight line that will best minimize the residual sum of squares between the observed responses in the dataset***, and the responses predicted by the linear approximation.
 
