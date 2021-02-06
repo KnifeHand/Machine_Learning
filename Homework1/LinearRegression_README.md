@@ -155,10 +155,10 @@ You can **calculate the coefficients**, the residual **sum of squares** and the 
 
 Wwe can also generalize the linear regression model to multiple explanatory variables; this process is called multiple linear regression:
 
-![Multiple Linear Regression Graph](/Homework1/images/multipleLinearRegressionExpression.jpg?raw=true)
+![Multiple Linear Regression Graph](/Homework1/images/multipleLinearRegressionExpression.JPG?raw=true)
 
 Here, w0 is the y-axis intercept with x0 = 1.  The following figure shows how the two-dimensional, fitted hyperplane of a multiple linear regression model with two features could look:
 
-![Multiple Linear Regression Graph](/Homework1/images/MultLinReg2features.jpg?raw=true)
+![Multiple Linear Regression Graph](/Homework1/images/MultLinReg2features.JPG?raw=true)
 
 As we can see, visualizing multiple linear regression fits in three-dimensional scatter plot are already challenging to interpret when looking at static figures.
