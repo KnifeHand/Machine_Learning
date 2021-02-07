@@ -9,17 +9,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Generate samples
-x_data = np.array([35.,38.,31.,20.,22.,17.,60.,8.,60.])
-y_data = 2*x_data+50+5*np.random.random()
+x_data = np.array([35., 38., 31., 20., 22., 25., 17., 60., 8., 60.])
+y_data = 2 * x_data + 50 + 5 * np.random.random(10)
 
 # Plot the landscape
-bb = np.arange(0,100,1)# bias
-ww = np.arange(-5,5,0.1)# weight
-Z = np.zeros((len(bb),len(ww)))
+bb = np.arange(0, 100, 1)  # bias
+ww = np.arange(-5, 5, 0.1)  # weight
+Z = np.zeros((len(bb), len(ww)))
 
 # # # For possible w and b values
-# bias = np.arange(0, 100, 1)
-# weight = np.arange(-5, 5, 0.1)
+# bias = np.arrange(0, 100, 1)
+# weight = np.arrange(-5, 5, 0.1)
 # Z = np.zeros((len(bias), len(weight)))
 
 for i in range(len(bb)):
@@ -28,14 +28,16 @@ for i in range(len(bb)):
         w = ww[j]
         Z[j][i] = 0  # loss function
         for n in range(len(x_data)):
-            Z[j][i] = Z[j][i] + (w*x_data[n]+b - y_data[n])**2 # this is the loss
-            Z[j][i] = Z[j][i]/len(x_data)
+            Z[j][i] = Z[j][i] + (w * x_data[n] + b - y_data[n]) ** 2  # this is the loss
+            Z[j][i] = Z[j][i] / len(x_data)
+
+#plt.contour(bb, ww, Z, 50, alpha=0.5, cmap=plt.get_cmap('jet'))
 
 # Find best w and b
 b = 0  # initial b
 w = 0  # initial w
-lr = 0.001  # learning rate
-iteration = 10000  # example iteration number
+lr = 0.0001  # learning rate
+iteration = 20000  # example iteration number
 
 # Iterations
 b_history = [b]
@@ -46,21 +48,24 @@ for i in range(iteration):
     b_grad = 0.0
     w_grad = 0.0
     for n in range(len(x_data)):
-        b_grad += b_grad+(b+w*x_data[n]-y_data[n])*1.0
-        w_grad += w_grad+(b+w*x_data[n]-y_data[n])*x_data[n]
-    b = b-b_grad*lr
-    w = w-w_grad*lr
+        b_grad = b_grad+(b + w * x_data[n] - y_data[n]) * 1.0
+        w_grad = w_grad+(b + w * x_data[n] - y_data[n]) * x_data[n]
+    b = b - b_grad * lr
+    w = w - w_grad * lr
+    # Store parameters for plotting
+    b_history.append(b)
+    w_history.append(w)
 
 # model by gradient descent
 
-# Store parameters for plotting
-b_history.append(b)
-w_history.append(w)
 
-plt.xlim(0,100)
-plt.ylim(-5,5)
 plt.contour(bb, ww, Z, 50, alpha=0.5, cmap=plt.get_cmap('jet'))
+plt.plot([50], [2], 'x', ms=12, markeredgewidth=3, color='orange')
 plt.contour(b_history, w_history, 'o-', ms=3, lw=1.5, color='black')
+plt.xlim(0, 100)
+plt.ylim(-5, 5)
+plt.xlabel(r'$b$',fontsize=16)
+plt.ylabel(r'$w$',fontsize=16)
 plt.show()
 
 ###############################################################################
@@ -111,5 +116,3 @@ plt.show()
 # plt.ylabel('Brain Weight in grams')
 # plt.legend()
 # plt.show()
-
-
