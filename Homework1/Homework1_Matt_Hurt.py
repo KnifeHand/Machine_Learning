@@ -48,11 +48,11 @@ for i in range(iteration):
     b_grad = 0.0
     w_grad = 0.0
     for n in range(len(x_data)):
-        b_grad += b_grad+(b + w * x_data[n] - y_data[n]) * 1.0
+        b_grad += b_grad+(b + w * x_data[n] - y_data[n]) * 1.0 # TODO: RuntimeWarning: overflow encountered in double_scalars??
         w_grad += w_grad+(b + w * x_data[n] - y_data[n]) * x_data[n]
 
     b = b - b_grad * lr
-    w = w - w_grad * lr
+    w = w - w_grad * lr #TODO: RuntimeWarning: invalid value encountered in double_scalars?
 
     # Store parameters for plotting
     b_history.append(b)
@@ -64,7 +64,7 @@ plt.xlim(0, 100)
 plt.ylim(-5, 5)
 plt.contour(bb, ww, Z, 50, alpha=0.5, cmap=plt.get_cmap('jet'))
 plt.plot([50], [2], 'x', ms=12, markeredgewidth=3, color='orange')
-#plt.contour(b_history, w_history, 'o-', ms=3, lw=1.5, color='black')
+#plt.contour(b_history, w_history, 'o-', ms=3, lw=1.5, color='black') "TODO:  why is this having a runtime error?
 
 plt.xlabel(r'$b$',fontsize=16)
 plt.ylabel(r'$w$',fontsize=16)
