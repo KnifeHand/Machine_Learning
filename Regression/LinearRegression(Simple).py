@@ -91,7 +91,7 @@ def plot(x, y, significance=4):
     plt.text(np.median(x[int(len(x)/2):len(x)]), np.median(y[:int(len(y)/2)]), 'SSE=' + str(round((SSE(x, y)), significance)) + "\nSST=" + str(round(SST(x, y), significance)), horizontalalignment='center',  verticalalignment='center', fontsize=12)
     plt.legend(loc="upper left")
     
-    plt.show
+    plt.show()
     
 
 
