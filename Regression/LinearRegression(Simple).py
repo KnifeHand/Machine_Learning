@@ -88,7 +88,9 @@ def plot(x, y, significance=4):
     plt.scatter(x, y, label="data")
     plt.title("Linear Regression: r^2=" + str(round(r2(x, y), significance)) + ", r=" + str(round(r(x, y), significance)))
     plt.plot(x1, pred(x, y, x1), '-r', label=line(x, y,significance))
-    plt.text(np.median(x[int(len(x)/2):len(x)]), np.median(y[:int(len(y)/2)]), 'SSE=' + str(round((SSE(x, y)), significance)) + "\nSST=" + str(round(SST(x, y), significance)), horizontalalignment='center',  verticalalignment='center', fontsize=12)
+    plt.text(np.median(x[int(len(x)/2):len(x)]), np.median(y[:int(len(y)/2)]), 'SSE=' + str(round((SSE(x, y)), significance))
+             + "\nSST=" + str(round(SST(x, y), significance)), horizontalalignment='center',  verticalalignment='center',
+             fontsize=12)
     plt.legend(loc="upper left")
     
     plt.show()
