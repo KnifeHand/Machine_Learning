@@ -6,7 +6,9 @@ Linear Regression
 
 """
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
+#plt.rcParams['figure.figsize'] = (12.0, 9.0)
 
 # Generate samples
 x_data = np.array([35., 38., 31., 20., 22., 25., 17., 60., 8., 60.])
@@ -28,16 +30,16 @@ for i in range(len(bb)):
         w = ww[j]
         Z[j][i] = 0  # loss function
         for n in range(len(x_data)):
-            Z[j][i] = Z[j][i] + (w * x_data[n] + b - y_data[n]) ** 2  # this is the loss
-        Z[j][i] = Z[j][i] / len(x_data)
+            Z[j][i] = Z[j][i] + (w*x_data[n]+b - y_data[n])**2 # this is the loss
+        Z[j][i] = Z[j][i]/len(x_data)
 
 #plt.contour(bb, ww, Z, 50, alpha=0.5, cmap=plt.get_cmap('jet'))
 
 # Find best w and b
 b = 0  # initial b
 w = 0  # initial w
-lr = 0.0001  # learning rate
-iteration = 20000  # example iteration number
+lr = 0.000001  # learning rate
+iteration = 500000  # example iteration number
 
 # Iterations
 b_history = [b]
@@ -48,11 +50,11 @@ for i in range(iteration):
     b_grad = 0.0
     w_grad = 0.0
     for n in range(len(x_data)):
-        b_grad += b_grad+(b + w * x_data[n] - y_data[n]) * 1.0 # TODO: RuntimeWarning: overflow encountered in double_scalars??
-        w_grad += w_grad+(b + w * x_data[n] - y_data[n]) * x_data[n]
+        b_grad += b_grad+(b + w*x_data[n] - y_data[n])*1.0 # TODO: RuntimeWarning: overflow encountered in double_scalars??
+        w_grad += w_grad+(b + w*x_data[n] - y_data[n])*x_data[n]
 
-    b = b - b_grad * lr
-    w = w - w_grad * lr #TODO: RuntimeWarning: invalid value encountered in double_scalars?
+    b = b - b_grad*lr
+    w = w - w_grad*lr #TODO: RuntimeWarning: invalid value encountered in double_scalars?
 
     # Store parameters for plotting
     b_history.append(b)
@@ -62,9 +64,9 @@ for i in range(iteration):
 
 plt.xlim(0, 100)
 plt.ylim(-5, 5)
-plt.contour(bb, ww, Z, 50, alpha=0.5, cmap=plt.get_cmap('jet'))
+plt.contourf(bb, ww, Z, 50, alpha=0.5, cmap=plt.get_cmap('jet'))
 plt.plot([50], [2], 'x', ms=12, markeredgewidth=3, color='orange')
-#plt.contour(b_history, w_history, 'o-', ms=3, lw=1.5, color='black') "TODO:  why is this having a runtime error?
+plt.plot(b_history, w_history, 'o-', ms=3, lw=1.5, color='black') # "TODO:  why is this having a runtime error?
 
 plt.xlabel(r'$b$',fontsize=16)
 plt.ylabel(r'$w$',fontsize=16)
@@ -72,7 +74,7 @@ plt.show()
 
 ###############################################################################
 
-# plt.rcParams['figure.figsize'] = (20.0, 10.0)
+
 
 # # Reading Data
 # data = pd.read_csv('headbrain.csv')
