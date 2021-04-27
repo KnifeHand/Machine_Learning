@@ -177,10 +177,14 @@ if circles is not None:
                     (x - 40, y), cv2.FONT_HERSHEY_PLAIN,
                     1.5, (0, 255, 0), thickness=2, lineType=cv2.LINE_AA)
 
+# print("roi = ", roi)
+print("list of diameter = ", diameter)
+
 # get biggest diameter
 biggest = max(diameter)
 i = diameter.index(biggest)
 print("biggest value", biggest)
+print("x = ", x)
 
 # scale everything according to maximum diameter
 # todo: this should be chosen by the user
@@ -193,12 +197,13 @@ elif materials[i] == "Nickel":
 elif materials[i] == "Quarter":
     diameter = [x / biggest * 24.26 for x in diameter]
     scaledTo = "Scaled to 25 cents"
-    print("Quarter diameter", diameter)
 elif materials[i] == "Penny":
     diameter = [x / biggest * 19.05 for x in diameter]
     scaledTo = "Scaled to 1 cent"
 else:
     scaledTo = "unable to scale.."
+
+print("diameter", diameter)
 
 i = 0
 total = 0
@@ -209,16 +214,16 @@ while i < len(diameter):
     t = "Unknown"
 
     # compare to known diameters with some margin for error
-    if math.isclose(d, 17.91, abs_tol=1.25) and m == "Dime":
+    if math.isclose(d, 17.91, abs_tol=0) and m == "Dime":
         t = "10 cents"
         total += 10
-    elif math.isclose(d, 24.26, abs_tol=2.5) and m == "Quarter":
+    elif math.isclose(d, 24.26, abs_tol=0) and m == "Quarter":
         t = "25 cents"
         total += 25
-    elif math.isclose(d, 21.21, abs_tol=1.25) and m == "Nickel":
+    elif math.isclose(d, 21.21, abs_tol=0) and m == "Nickel":
         t = "5 cents"
         total += 5
-    elif math.isclose(d, 19.05, abs_tol=1.25) and m == "Penny":
+    elif math.isclose(d, 19.05, abs_tol=0) and m == "Penny":
         t = "1 cent"
         total += 1
 
@@ -227,6 +232,9 @@ while i < len(diameter):
                 (x - 40, y + 22), cv2.FONT_HERSHEY_PLAIN,
                 1.5, (255, 255, 255), thickness=2, lineType=cv2.LINE_AA)
     i += 1
+
+    print("m = ", m)
+    print("d = ", d)
 
 # resize output image while retaining aspect ratio
 d = 768 / output.shape[1]
