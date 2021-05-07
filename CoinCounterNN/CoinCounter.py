@@ -1,5 +1,5 @@
 """
-Author: Matt Hurt
+Author: Matt Hurt, Adam Prieto
 Machine Learning - 3120: Final Project
 Created: April 25, 2021
 """
